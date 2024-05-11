@@ -47,6 +47,9 @@
                       <a href="{{ route('user.login') }}" class="dropdown-item has-icon">
                           <i class="fas fa-user"></i> User
                       </a>
+                      <a href="{{ route('user.register') }}" class="dropdown-item has-icon">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Register
+                      </a>
                   </div>
               </li>
           @endguest
@@ -54,7 +57,7 @@
 
         @auth('admin')
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <div class="d-sm-none d-lg-inline-block">Hallo, {{ auth('admin')->user()->username }}</div></a>
+            <div class="d-sm-none d-lg-inline-block">Hallo, {{ auth('admin')->user()->nama }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Mau ke mana?</div>
               <a href="{{ route('admin.dashboard') }}" class="dropdown-item has-icon">
@@ -74,7 +77,7 @@
 
         @auth('users')
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <div class="d-sm-none d-lg-inline-block">Hallo, {{ auth('users')->user()->username }}</div></a>
+            <div class="d-sm-none d-lg-inline-block">Hallo, {{ auth('users')->user()->nama }}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Mau ke mana?</div>
               <a href="{{ route('user.dashboard') }}" class="dropdown-item has-icon">

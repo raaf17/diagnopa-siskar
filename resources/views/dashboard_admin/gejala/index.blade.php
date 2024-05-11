@@ -1,17 +1,29 @@
 @extends('layouts.main')
 
 @section('main-content')
+
+
 <section class="section">
   <div class="section-header">
-    <h1>DataTables</h1>
+    <h1>Data Gejala</h1>
     <div class="section-header-breadcrumb">
-      <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-      <div class="breadcrumb-item"><a href="#">Modules</a></div>
+      <div class="breadcrumb-item active"><a href="/admin/dashboard">Dashboard</a></div>
+      <div class="breadcrumb-item active"><a href="/admin/dashboard/gejala">Gejala</a></div>
     </div>
   </div>
 
   <div class="section-body">
-    <h2 class="section-title">DataTables</h2>
+    {{-- <h2 class="section-title">DataTables</h2> --}}
+    @if (session()->has('success'))
+      <div class="alert alert-success alert-dismissible show fade mt-3 ">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+          {{ session('success') }}
+        </div>
+      </div>
+    @endif
     {{-- <p class="section-lead">
       We use 'DataTables' made by @SpryMedia. You can check the full documentation <a href="https://datatables.net/">here</a>.
     </p> --}}
@@ -20,7 +32,10 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h4>Basic DataTables</h4>
+            {{-- <h4>Basic DataTables</h4> --}}
+            <form action="{{ route('gejala.create') }}" method="GET">
+              <button type="submit" class="btn btn-primary">Tambah Gejala Baru</button>
+            </form>
           </div>
           <div class="card-body">
             <div class="table-responsive">
@@ -42,9 +57,13 @@
                       <td>{{ $gejala->created_at }}</td>
                       <td>{{ $gejala->updated_at }}</td>
                       <td>
-                        <a href="#" class="btn btn-info">Detail</a>
-                        <a href="#" class="btn btn-warning">Edit</a>
-                        <a href="#" class="btn btn-danger">Hapus</a>
+                        <a href="{{ route('gejala.show', $gejala->slug) }}" class="btn btn-info">Detail</a>
+                        <a href="{{ route('gejala.edit', $gejala->slug) }}" class="btn btn-warning">Edit</a>
+                        <form action="{{ route('gejala.destroy', $gejala->id) }}" method="POST" class="d-inline">
+                          @csrf
+                          @method('DELETE')
+                          <button class="btn btn-danger" onclick="return confirm('Yakin Ingin Menghapus Data Siswa Ini?')">Hapus</button>
+                      </form>
                       </td>
                     </tr>
                   @endforeach

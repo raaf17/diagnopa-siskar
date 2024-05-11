@@ -22,6 +22,15 @@
               <form method="POST" action="{{ route('user.store') }}">
                 @csrf
                 <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input id="nama" type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" tabindex="1" autofocus value="{{ old('nama') }}">
+                  @error('nama')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                  @enderror
+                </div>
+                <div class="form-group">
                   <label for="username">Username</label>
                   <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" tabindex="1" autofocus value="{{ old('username') }}">
                   @error('username')
@@ -57,7 +66,6 @@
                 </div>
               </form>
             </div>
-            <h4 style="text-align: center; font-size: 15px; padding-bottom: 20px;">Already have account? <a href="{{ route('user.login') }}">login now</a></h4>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@
   {{-- Profile --}}   
   <ul class="navbar-nav navbar-right">
     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-      <div class="d-sm-none d-lg-inline-block"> Selamat datang, {{ auth()->user()->username }}</div></a>
+      <div class="d-sm-none d-lg-inline-block"> Selamat datang, {{ auth()->user()->nama }}</div></a>
       <div class="dropdown-menu dropdown-menu-right">
         @can('admin')    
           <form action="{{ route('admin.logout') }}" method="POST">

@@ -35,6 +35,7 @@ Route::post('/admin/logout', [AuthAdmin::class, 'logout'])->name('admin.logout')
 Route::middleware('auth:admin')->group(function () {
     Route::get('admin/dashboard', [DashboardAdmin::class, 'index'])->name('admin.dashboard');
     Route::resource('admin/dashboard/gejala', DataGejala::class);
+    Route::get('/admin/dashboard/slugGejala', [DataGejala::class, 'checkSlug']);
     Route::resource('admin/dashboard/penyakit', Penyakit::class);
     Route::resource('admin/dashboard/datauser', DataUser::class);
     Route::resource('admin/dashboard/posts', DataUser::class);

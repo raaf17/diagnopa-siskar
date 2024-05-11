@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('gejala', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->unique();
+            $table->string('slug')->unique();
+            $table->text('detail');
             $table->timestamps();
         });
     }

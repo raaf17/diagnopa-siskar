@@ -22,6 +22,7 @@ class AuthUser extends Controller
         // ddd($request);
 
         $rulesValidation = $request->validate([
+            'nama' => ['required','max:200'],
             'username' => ['required','min:3','max:200','unique:user'],
             'email' => ['required','email:dns','unique:user'],
             'password' => ['required','min:6']
