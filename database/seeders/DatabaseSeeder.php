@@ -23,17 +23,17 @@ class DatabaseSeeder extends Seeder
         // Seeder user & posts
         Admin::factory()->create([
             'nama' => "Yuma Aji Pangestu",
-            'username' => "yuma",
+            'username' => "admin",
             'email' => "yuma@gmail.com",
-            'password' => "password"
+            'password' => '$2y$12$v8ugOhhoygMGTJTjSEdVoeyR4N1stuWSR/UtO.my0pSXw/4ltRv/O'
         ]);
         Users::factory()->create([
             'nama' => "Muhammad Rafi",
-            'username' => "rafi",
+            'username' => "user",
             'email' => "rafi@gmail.com",
-            'password' => "password"
+            'password' => '$2y$12$v8ugOhhoygMGTJTjSEdVoeyR4N1stuWSR/UtO.my0pSXw/4ltRv/O'
         ]);
-        Admin::factory(2)->create();
+        Admin::factory(3)->create();
         Users::factory(5)->create();
         Posts::factory(15)->create();
 

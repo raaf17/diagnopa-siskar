@@ -33,8 +33,8 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Posts</span></a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" href="{{ route('posts.index') }}">All Posts</a></li>
-              <li><a class="nav-link" href="{{ route('posts.create') }}">Create Post</a></li>
+              <li><a class="nav-link" href="{{ route('post.index') }}">All Posts</a></li>
+              <li><a class="nav-link" href="{{ route('post.create') }}">Create Post</a></li>
             </ul>
           </li>
       </ul>
@@ -54,8 +54,8 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Diagnosa</span></a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" href="{{ route('posts.index') }}">Buat diagnosa</a></li>
-              <li><a class="nav-link" href="{{ route('posts.create') }}">Hisory</a></li>
+              <li><a href="{{ route('diagnosa.create') }}" class="nav-link">Buat diagnosa</a></li>
+              <li><a href="{{ route('diagnosa.index') }}"class="nav-link">History</a></li>
             </ul>
           </li>
       </ul>

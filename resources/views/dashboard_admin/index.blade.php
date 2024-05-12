@@ -6,21 +6,6 @@
 <div class="row">
   <div class="col-lg-3 col-md-6 col-sm-6 col-12">
     <div class="card card-statistic-1">
-      <div class="card-icon bg-danger">
-        <i class="fa-solid fa-viruses fa-2x"></i>
-      </div>
-      <div class="card-wrap">
-        <div class="card-header">
-          <h4>Total Penyakit</h4>
-        </div>
-        <div class="card-body">
-          10
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-    <div class="card card-statistic-1">
       <div class="card-icon bg-warning">
         <i class="fa-solid fa-code-fork fa-2x"></i>
       </div>
@@ -29,7 +14,22 @@
           <h4>Total Gejala</h4>
         </div>
         <div class="card-body">
-          56
+          {{ $gejala }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+    <div class="card card-statistic-1">
+      <div class="card-icon bg-danger">
+        <i class="fa-solid fa-viruses fa-2x"></i>
+      </div>
+      <div class="card-wrap">
+        <div class="card-header">
+          <h4>Total Penyakit</h4>
+        </div>
+        <div class="card-body">
+          {{ $penyakit }}
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
           <h4>Total User</h4>
         </div>
         <div class="card-body">
-          235
+          {{ $users }}
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
           <h4>Total Posts</h4>
         </div>
         <div class="card-body">
-          21
+          {{ $posts }}
         </div>
       </div>
     </div>

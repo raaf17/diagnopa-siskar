@@ -100,36 +100,37 @@
     {{-- Posts - Main content --}}
     <div class="main-content">
       <section class="section">
-        <div class="section-header">
-          <h1>Berita terkini</h1>
-          <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href{{ route('home') }}">Home</a></div>
-          </div>
-        </div>
-   
-        <div class="section-body">
-          <div class="row">             
-            @foreach ($posts as $post)
-            <div class="col-12 col-md-6 col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">{{ $post->judul }}</h4>
-                </div>
-                <div class="card-header">
-                  @if ($post->image)  
-                    <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top" alt="...">
-                  @else  
-                    <img src="https://source.unsplash.com/1200x500/?chicken" class="card-img-top" alt="...">
-                  @endif
-                </div>
-                <div class="card-body">
-                  <p class="card-text">{{ $post->excerpt }}</p>
-                  <a href="{{ route('single.post', $post->slug) }}" class="card-link">Read more</a>
+        <div class="col-12">
+          <article class="article article-style-c">
+            <div class="article-header">
+              @if ($post->image)  
+                <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top" alt="...">
+              @else  
+                <img src="https://source.unsplash.com/1200x400/?chicken" class="card-img-top" alt="...">
+              @endif
+            </div>
+            <div class="article-details">
+              <div class="article-category"><a href="#">Post</a> <div class="bullet"></div> <a href="#">{{ $post->created_at->diffForHumans() }}</a></div>
+              <div class="article-title">
+                <h1><a href="{{ route('home') }}">{{ $post->judul }}</a></h1>
+              </div>
+              <p>{!! $post->body !!}</p>
+              <div class="article-user">
+                <img alt="image" src="{{ asset('templates/assets/img/avatar/avatar-1.png') }}">
+                <div class="article-user-details">
+                  <div class="user-detail-name">
+                    <a href="">{{ $post->author->nama }}</a>
+                  </div>
+                  <div class="text-job">Admin</div>
                 </div>
               </div>
+              <div class="d-flex br pt-4">
+                <form action="{{ route('home') }}" method="GET" class="pt-3 mr-2">
+                  <button type="submit" class="btn btn-secondary">Kembali</button>
+                </form>
+              </div>
             </div>
-            @endforeach
-          </div>
+          </article>
         </div>
       </section>
     </div>

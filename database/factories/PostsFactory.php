@@ -17,8 +17,8 @@ class PostsFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => mt_rand(1,4),
-            'title' => $this->faker->sentence(mt_rand(2,4)),
+            'admin_id' => mt_rand(1,3),
+            'judul' => $this->faker->sentence(mt_rand(2,4)),
             'slug' => $this->faker->slug(),
             'excerpt' => $this->faker->paragraph(),
             'body' => collect($this->faker->paragraphs(mt_rand(3,10)))

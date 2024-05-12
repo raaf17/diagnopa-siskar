@@ -9,7 +9,7 @@ class AuthAdmin extends Controller
 {
     public function index(){
         return view('login.admin',[
-            'pageTitle' => 'Adminww | Login'
+            'pageTitle' => 'Admin | Login'
         ]);
     }
 

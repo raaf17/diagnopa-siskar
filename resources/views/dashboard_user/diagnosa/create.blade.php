@@ -3,7 +3,7 @@
 @section('main-content')
 <section class="section">
 
-  <h1>Ini mau diisi apa?</h1>
+  <h1>Saya Mau Buat Diagnosa</h1>
   
 </section>
 @endsection

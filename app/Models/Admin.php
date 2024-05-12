@@ -11,7 +11,7 @@ class Admin extends Model
 
     protected $table = 'admin';
 
-    public function post(){
+    public function posts(){
         return $this->hasMany(Posts::class);
     }
 }

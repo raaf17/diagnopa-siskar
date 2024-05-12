@@ -1,8 +1,6 @@
 @extends('layouts.main')
 
 @section('main-content')
-
-
 <section class="section">
   <div class="section-header">
     <h1>Data Gejala</h1>
@@ -11,9 +9,7 @@
       <div class="breadcrumb-item active"><a href="/admin/dashboard/gejala">Gejala</a></div>
     </div>
   </div>
-
   <div class="section-body">
-    {{-- <h2 class="section-title">DataTables</h2> --}}
     @if (session()->has('success'))
       <div class="alert alert-success alert-dismissible show fade mt-3 ">
         <div class="alert-body">
@@ -24,15 +20,10 @@
         </div>
       </div>
     @endif
-    {{-- <p class="section-lead">
-      We use 'DataTables' made by @SpryMedia. You can check the full documentation <a href="https://datatables.net/">here</a>.
-    </p> --}}
-
     <div class="row">
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            {{-- <h4>Basic DataTables</h4> --}}
             <form action="{{ route('gejala.create') }}" method="GET">
               <button type="submit" class="btn btn-primary">Tambah Gejala Baru</button>
             </form>

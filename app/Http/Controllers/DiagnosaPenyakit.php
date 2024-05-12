@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Penyakit extends Controller
+class DiagnosaPenyakit extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard_admin.penyakit.index');
+        return view('dashboard_user.diagnosa.history',[
+            'pageTitle' => 'User | Diagnosa'
+        ]);
     }
 
     /**
@@ -19,7 +21,9 @@ class Penyakit extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard_user.diagnosa.create', [
+            'pageTitle' => 'Buat Diagnosa'
+        ]);
     }
 
     /**
