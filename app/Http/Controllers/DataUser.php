@@ -80,7 +80,6 @@ class DataUser extends Controller
      */
     public function update(Request $request, string $username)
     {    
-        // ddd($request);
         $rulesValidation = [
             'nama' => ['required', 'max:255'],
             'email' => ['required', 'email:dns'],

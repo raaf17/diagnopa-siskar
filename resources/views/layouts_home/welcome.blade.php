@@ -33,7 +33,7 @@
         </div>
       </form>
 
-      {{-- Authentikasi admin & user --}}
+      {{-- Authentikasi --}}
       <ul class="navbar-nav navbar-right">
         @guest('admin')
           @guest('users')
@@ -55,6 +55,7 @@
           @endguest
         @endguest
 
+        {{-- Greeting admin & user --}}
         @auth('admin')
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <div class="d-sm-none d-lg-inline-block">Hallo, {{ auth('admin')->user()->nama }}</div></a>
@@ -97,7 +98,7 @@
       </ul>
     </nav>
 
-    {{-- Posts - Main content --}}
+    {{-- Main content - Posts --}}
     <div class="main-content">
       <section class="section">
         <div class="section-header">
@@ -106,7 +107,6 @@
             <div class="breadcrumb-item active"><a href{{ route('home') }}">Home</a></div>
           </div>
         </div>
-   
         <div class="section-body">
           <div class="row">             
             @foreach ($posts as $post)

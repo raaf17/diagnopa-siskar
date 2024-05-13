@@ -33,7 +33,7 @@
         </div>
       </form>
 
-      {{-- Authentikasi admin & user --}}
+      {{-- Authentikasi --}}
       <ul class="navbar-nav navbar-right">
         @guest('admin')
           @guest('users')
@@ -97,7 +97,7 @@
       </ul>
     </nav>
 
-    {{-- Posts - Main content --}}
+    {{-- Main content - single post --}}
     <div class="main-content">
       <section class="section">
         <div class="col-12">
@@ -110,16 +110,16 @@
               @endif
             </div>
             <div class="article-details">
-              <div class="article-category"><a href="#">Post</a> <div class="bullet"></div> <a href="#">{{ $post->created_at->diffForHumans() }}</a></div>
+              <div class="article-category"><a href="{{ route('single.post', $post->slug) }}">Post</a> <div class="bullet"></div> <a href="{{ route('single.post', $post->slug) }}">{{ $post->created_at->diffForHumans() }}</a></div>
               <div class="article-title">
-                <h1><a href="{{ route('home') }}">{{ $post->judul }}</a></h1>
+                <h1><a href="{{ route('single.post', $post->slug) }}">{{ $post->judul }}</a></h1>
               </div>
               <p>{!! $post->body !!}</p>
               <div class="article-user">
                 <img alt="image" src="{{ asset('templates/assets/img/avatar/avatar-1.png') }}">
                 <div class="article-user-details">
                   <div class="user-detail-name">
-                    <a href="">{{ $post->author->nama }}</a>
+                    <a href="{{ route('single.post', $post->slug) }}">{{ $post->author->nama }}</a>
                   </div>
                   <div class="text-job">Admin</div>
                 </div>

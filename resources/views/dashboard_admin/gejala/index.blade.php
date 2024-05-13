@@ -6,7 +6,7 @@
     <h1>Data Gejala</h1>
     <div class="section-header-breadcrumb">
       <div class="breadcrumb-item active"><a href="/admin/dashboard">Dashboard</a></div>
-      <div class="breadcrumb-item active"><a href="/admin/dashboard/gejala">Gejala</a></div>
+      <div class="breadcrumb-item active">Gejala</div>
     </div>
   </div>
   <div class="section-body">
@@ -28,6 +28,8 @@
               <button type="submit" class="btn btn-primary">Tambah Gejala Baru</button>
             </form>
           </div>
+          
+          {{-- Data tables untuk data gejala --}}
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-striped" id="table-1">

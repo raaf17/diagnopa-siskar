@@ -79,7 +79,6 @@ class DataPenyakit extends Controller
      */
     public function update(Request $request, string $slug)
     {   
-        // ddd($request);
 
         $rulesValidation = [
             'nama' => ['required', 'max:255', 'unique:penyakit'],

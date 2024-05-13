@@ -33,7 +33,7 @@
   <script src="{{ asset('templates/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
   <script src="{{ asset('templates/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
   <script src="{{ asset('templates/node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js') }}"></script>
-  
   <script src="{{ asset('templates/assets/js/page/modules-datatables.js') }}"></script>
+  
 </body>
 </html>

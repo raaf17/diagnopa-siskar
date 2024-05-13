@@ -9,30 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthUser extends Controller
 {
-    
-    
-    public function register(){
-        return view('login.register',[
-            'pageTitle' => 'User | Register'
-        ]);
-    }
-
-    public function store(Request $request){
-
-        // ddd($request);
-
-        $rulesValidation = $request->validate([
-            'nama' => ['required','max:200'],
-            'username' => ['required','min:3','max:200','unique:user'],
-            'email' => ['required','email:dns','unique:user'],
-            'password' => ['required','min:6']
-        ]);
-        $rulesValidation['password'] = Hash::make($rulesValidation['password']);
-
-        Users::create($rulesValidation);
-
-        return redirect('/user/login')->with('RegisterSuccess', 'Register successfull, login here');
-    }
 
     public function index(){
         return view('login.user',[
@@ -52,6 +28,27 @@ class AuthUser extends Controller
         }
 
         return back()->with('loginFailed', 'Login failed, try again');
+    }
+
+    public function register(){
+        return view('login.register',[
+            'pageTitle' => 'User | Register'
+        ]);
+    }
+
+    public function store(Request $request){
+
+        $rulesValidation = $request->validate([
+            'nama' => ['required','max:200'],
+            'username' => ['required','min:3','max:200','unique:user'],
+            'email' => ['required','email:dns','unique:user'],
+            'password' => ['required','min:6']
+        ]);
+        $rulesValidation['password'] = Hash::make($rulesValidation['password']);
+
+        Users::create($rulesValidation);
+
+        return redirect('/user/login')->with('RegisterSuccess', 'Register successfull, login here');
     }
 
     public function logout(Request $request){

@@ -38,7 +38,7 @@
             @enderror
           </div>
           <div class="d-flex mt-3">
-            <button class="btn btn-secondary mr-2"><a href="/admin/dashboard/penyakit" class="text-decoration-none" >Close</a></button>
+            <button class="btn btn-secondary mr-2"><a href="/admin/dashboard/penyakit" class="text-decoration-none" >Kembali</a></button>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
@@ -48,6 +48,7 @@
   </div>
 </div>
 
+{{-- Untuk auto create slug --}}
 <script>
   const nama = document.querySelector('#nama')
   const slug = document.querySelector('#slug')

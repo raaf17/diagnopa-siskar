@@ -9,7 +9,9 @@
       <div class="breadcrumb-item active"><a href="/admin/dashboard/post">posts</a></div>
     </div>
   </div>
+
   <div class="section-body">
+    {{-- Alert --}}
     @if (session()->has('success'))
       <div class="alert alert-success alert-dismissible show fade mt-3 ">
         <div class="alert-body">
@@ -20,6 +22,8 @@
         </div>
       </div>
     @endif
+
+    {{-- Data tables untuk data posts --}}
     <div class="row">
       <div class="col-12">
         <div class="card">

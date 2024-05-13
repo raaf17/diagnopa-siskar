@@ -11,53 +11,49 @@
     </div>
     @can('admin')    
       <ul class="sidebar-menu">
-        {{-- Dashboard --}}
-          <li class="menu-header">Dashboard</li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('admin.dashboard') }}">Main Dashboard</a></li>
-              </ul>
-            </li>
-            {{-- Starter --}}
-          <li class="menu-header">Master Data</li>
+        <li class="menu-header">Dashboard</li>
           <li class="nav-item dropdown">
-              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Master Data</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('gejala.index') }}">Data Gejala</a></li>
-                <li><a class="nav-link" href="{{ route('penyakit.index') }}">Data Penyakit</a></li>
-                <li><a class="nav-link" href="{{ route('datauser.index') }}">Data User</a></li>
-              </ul>
-            </li>
-          <li class="menu-header">Posts</li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Posts</span></a>
+            <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" href="{{ route('post.index') }}">All Posts</a></li>
-              <li><a class="nav-link" href="{{ route('post.create') }}">Create Post</a></li>
+              <li><a class="nav-link" href="{{ route('admin.dashboard') }}">Main Dashboard</a></li>
             </ul>
           </li>
+        <li class="menu-header">Master Data</li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Master Data</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{ route('gejala.index') }}">Data Gejala</a></li>
+            <li><a class="nav-link" href="{{ route('penyakit.index') }}">Data Penyakit</a></li>
+            <li><a class="nav-link" href="{{ route('datauser.index') }}">Data User</a></li>
+          </ul>
+        </li>
+        <li class="menu-header">Posts</li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Posts</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{ route('post.index') }}">All Posts</a></li>
+            <li><a class="nav-link" href="{{ route('post.create') }}">Create Post</a></li>
+          </ul>
+        </li>
       </ul>
     @endcan
     @can('users')    
       <ul class="sidebar-menu">
-        {{-- Dashboard --}}
-          <li class="menu-header">Dashboard</li>
-            <li class="nav-item dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('user.dashboard') }}">Main Dashboard</a></li>
-              </ul>
-            </li>
-            {{-- Starter --}}
-          <li class="menu-header">Diagnosa</li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Diagnosa</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ route('diagnosa.create') }}" class="nav-link">Buat diagnosa</a></li>
-              <li><a href="{{ route('diagnosa.index') }}"class="nav-link">History</a></li>
-            </ul>
-          </li>
+        <li class="menu-header">Dashboard</li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="{{ route('user.dashboard') }}">Main Dashboard</a></li>
+          </ul>
+        </li>
+        <li class="menu-header">Diagnosa</li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Diagnosa</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ route('diagnosa.create') }}" class="nav-link">Buat diagnosa</a></li>
+            <li><a href="{{ route('diagnosa.index') }}"class="nav-link">History</a></li>
+          </ul>
+        </li>
       </ul>
     @endcan
   </aside>

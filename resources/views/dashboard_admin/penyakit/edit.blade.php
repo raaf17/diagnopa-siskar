@@ -50,6 +50,7 @@
   </div>
 </div>
 
+{{-- Untuk auto create slug --}}
 <script>
   const nama = document.querySelector('#nama')
   const slug = document.querySelector('#slug')

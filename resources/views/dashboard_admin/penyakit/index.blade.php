@@ -11,6 +11,7 @@
   </div>
 
   <div class="section-body">
+    {{-- Alert --}}
     @if (session()->has('success'))
       <div class="alert alert-success alert-dismissible show fade mt-3 ">
         <div class="alert-body">
@@ -21,11 +22,12 @@
         </div>
       </div>
     @endif
+
+    {{-- Data tables untuk data penyakit --}}
     <div class="row">
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            {{-- <h4>Basic DataTables</h4> --}}
             <form action="{{ route('penyakit.create') }}" method="GET">
               <button type="submit" class="btn btn-primary">Tambah Penyakit Baru</button>
             </form>

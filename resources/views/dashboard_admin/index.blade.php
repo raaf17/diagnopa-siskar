@@ -4,6 +4,7 @@
 
 {{-- Jumlah setiap master data --}}
 <div class="row">
+  {{-- Total data gejala --}}
   <div class="col-lg-3 col-md-6 col-sm-6 col-12">
     <div class="card card-statistic-1">
       <div class="card-icon bg-warning">
@@ -19,6 +20,7 @@
       </div>
     </div>
   </div>
+  {{-- Total data penyakit --}}
   <div class="col-lg-3 col-md-6 col-sm-6 col-12">
     <div class="card card-statistic-1">
       <div class="card-icon bg-danger">
@@ -34,6 +36,7 @@
       </div>
     </div>
   </div>
+  {{-- Total data user --}}
   <div class="col-lg-3 col-md-6 col-sm-6 col-12">
     <div class="card card-statistic-1">
       <div class="card-icon bg-success">
@@ -49,6 +52,7 @@
       </div>
     </div>
   </div>
+  {{-- Total data posts --}}
   <div class="col-lg-3 col-md-6 col-sm-6 col-12">
     <div class="card card-statistic-1">
       <div class="card-icon bg-success">

@@ -22,19 +22,19 @@
         @can('admin')    
           <form action="{{ route('admin.logout') }}" method="POST">
             @csrf
-              <button type="submit" class="dropdown-item has-icon text-danger"  style="display: flex; align-items: center;">
-                <i class="fas fa-sign-out-alt"></i>
-                Logout
-              </button>
+            <button type="submit" class="dropdown-item has-icon text-danger"  style="display: flex; align-items: center;">
+              <i class="fas fa-sign-out-alt"></i>
+              Logout
+            </button>
           </form>
         @endcan
         @can('users')    
           <form action="{{ route('user.logout') }}" method="POST">
             @csrf
-              <button type="submit" class="dropdown-item has-icon text-danger"  style="display: flex; align-items: center;">
-                <i class="fas fa-sign-out-alt"></i>
-                Logout
-              </button>
+            <button type="submit" class="dropdown-item has-icon text-danger"  style="display: flex; align-items: center;">
+              <i class="fas fa-sign-out-alt"></i>
+              Logout
+            </button>
           </form>
         @endcan
       </div>

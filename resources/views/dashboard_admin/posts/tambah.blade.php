@@ -76,7 +76,9 @@
   </div>
 </div>
 
+
 <script>
+  // Auto create slug
   const judul = document.querySelector('#judul')
   const slug = document.querySelector('#slug')
 
@@ -86,6 +88,7 @@
     .then(data=>slug.value = data.slug)
   })
 
+  // Preview image
   function previewImage(){
     const image = document.querySelector('#image')
     const imgPreview = document.querySelector('.img-preview')
